@@ -3,6 +3,16 @@
 @import '@fontsource/plus-jakarta-sans/500.css'; 
 @import '@fontsource/plus-jakarta-sans/700.css';
 @plugin "tailwind-scrollbar-hide";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
 }
