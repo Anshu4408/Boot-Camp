@@ -1,6 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { playfairBlack } from "@/app/font";
 
+import '@fontsource/plus-jakarta-sans'; // Defaults to weight 400
+import '@fontsource/plus-jakarta-sans/500.css'; // Import specific weights if needed
+import '@fontsource/plus-jakarta-sans/700.css';
+import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfairBlack.variable} antialiased`}
       >
         {children}
       </body>
