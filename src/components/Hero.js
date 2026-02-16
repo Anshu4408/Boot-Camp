@@ -27,23 +27,23 @@ const Hero = () => {
       {/* Vertical lines */}
       <div className="pointer-events-none absolute
   left-[30%]  top-[65%] bottom-[5%] w-[0.5px] md:w-[0.75px]
- bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)]" />
+ bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)] z-20" />
 
       <div className="pointer-events-none absolute
   left-[20%] top-[15%] bottom-[65%] w-[0.5px] md:w-[0.75px]
-  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)]" />
+  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)] z-20" />
 
       <div className="pointer-events-none absolute
   left-[10%] top-[45%] bottom-[25%] w-[0.5px] md:w-[0.75px]
-  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)]" />
+  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)] z-20" />
 
       <div className="pointer-events-none absolute
   left-[60%] top-[5%] bottom-[75%] w-[0.5px] md:w-[0.75px]
-  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)]" />
+  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)] z-20" />
 
       <div className="pointer-events-none absolute
   left-[80%] top-[35%] bottom-[45%] w-[0.5px] md:w-[0.75px]
-  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)]" />
+  bg-[linear-gradient(180deg,#090C17_0%,#622CD5_51%,#090C17_100%)] z-20" />
 
       {/* Horizontal line */}
       <div className="pointer-events-none absolute

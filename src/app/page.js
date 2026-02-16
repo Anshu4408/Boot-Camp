@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 const page = () => {
   return (<>
      <Navbar  />
-    <div className='min-h-screen w-full p-3 flex flex-col gap-5 px-7 mb-20 md:mb-40 gap-y-5 md:gap-y-10 '>
+    <div className='min-h-screen min-w-screen p-3 flex flex-col gap-5 px-7 mb-20 md:mb-40 gap-y-5 md:gap-y-10 '>
      
       <Hero/>
        <h1 className='text-lg md:text-3xl '>COMMUNITIES</h1>
