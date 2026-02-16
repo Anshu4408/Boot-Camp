@@ -2,7 +2,7 @@ import React from "react";
 import { playfairBlack } from "@/app/font";
 import { Sparkles,ArrowRight } from "lucide-react";
 const items = Array.from({ length: 200 });
-const activeCells = [14, 105, 167, 180, 200, 17, 45, 78, 123, 156, 189];
+const activeCells = [  61,  45, 57, 123, 136 ];
 
 const Hero = () => {
   return (<>
@@ -19,7 +19,7 @@ const Hero = () => {
             key={index}
             className={`
     aspect-square bg-[#010510] border border-[#0D0F14]
-    ${activeCells.includes(index) ? "bg-[#0D0F14]" : ""}
+    ${activeCells.includes(index) ? "bg-[#18161d]" : ""}
   `}
           />
         ))}

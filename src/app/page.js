@@ -20,21 +20,29 @@ const page = () => {
           <Card name="Community 1" img="./img7.svg" logo="./image2.svg"/>
           <Card name="Community 1" img="./img7.svg" logo="./image2.svg"/>
           <Card name="Community 1" img="./img7.svg" logo="./image2.svg"/>
-          <Card name="Community 1" img="./img7.svg" logo="./image2.svg"/>
-          <Card name="Community 1" img="./img7.svg" logo="./image2.svg"/>
+      
         </div>
          <div className='flex gap-5 mt-5 overflow-scroll scrollbar-hide'>
           <Card2  logo="./image3.svg" />
           <Card2  logo="./image3.svg" />
           <Card2  logo="./image3.svg" />
-          <Card2  logo="./image3.svg" />
-          <Card2  logo="./image3.svg" />
+         
         </div>
       </div>
 
         <h1 className='text-lg md:text-3xl '>FAQs</h1>
         <div>
         <Faqs title="How does the application process work?">
+         It just works. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ad.
+        </Faqs>
+      
+          <Faqs title="How does the application process work?">
+        It just works. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, laudantium?
+        </Faqs>
+            <Faqs title="How does the application process work?">
+           It just works. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, odio!
+        </Faqs>
+         <Faqs title="How does the application process work?">
          It just works. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, ad.
         </Faqs>
       
