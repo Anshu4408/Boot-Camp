@@ -8,7 +8,7 @@ const Hero = () => {
   return (<>
     <div className="relative w-full  mx-auto
   aspect-[2/1] min-h-[420px] sm:min-h-[500px]
-  bg-[#615977] rounded-2xl overflow-hidden">
+  bg-[#615977] rounded-2xl overflow-hidden max-w-[1285px]">
 
 
       {/* Grid */}
