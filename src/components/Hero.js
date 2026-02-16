@@ -6,9 +6,9 @@ const activeCells = [14, 105, 167, 180, 200, 17, 45, 78, 123, 156, 189];
 
 const Hero = () => {
   return (<>
-    <div className="relative w-full  mx-auto
+    <div className="relative w-[90vw] mx-auto
   aspect-[2/1] min-h-[420px] sm:min-h-[500px]
-  bg-[#615977] rounded-2xl overflow-hidden max-w-[85vw]">
+  bg-[#615977] rounded-2xl overflow-hidden">
 
 
       {/* Grid */}
