@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
 const Navbar = () => {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
         </ul>
 
       
-        <button className="hidden md:block bg-[#292740] text-white px-6 text-[11px] py-1 font-semibold rounded-[26pc]">
+        <button className="hidden md:block bg-[#292740] text-white px-6 text-[11px] py-1 font-semibold rounded-[26pc] cursor-pointer" onClick={() => router.push("/auth")}>
           REGISTER
         </button>
 
@@ -55,7 +56,7 @@ const Navbar = () => {
           <li>Benefits</li>
           <li>Testimonials</li>
           <li>Resources</li>
-          <button className="bg-[#292740] text-white px-6 text-[11px] py-1 font-semibold rounded-[26pc]">
+          <button className="bg-[#292740] text-white px-6 text-[11px] py-1 font-semibold rounded-[26pc] cursor-pointer" onClick={() => router.push("/auth")}>
             REGISTER
           </button>
         </ul>
