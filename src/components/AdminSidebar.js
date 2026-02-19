@@ -1,18 +1,33 @@
-"use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-const Navbar = () => {
+'use client';
+import React from 'react';
+import { LayoutDashboard, BookOpen, Users, Settings, LogOut } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useAuthToken } from '@/components/AuthTokenProvider';
+
+const adminMenuItems = [
+  
+  { icon: BookOpen, label: 'Courses', href: '/admin/courses' },
+
+
+];
+
+const AdminSidebar = () => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const { logout } = useAuthToken();
+
+  const isActive = (href) => pathname === href;
+
+  const handleLogout = () => {
+    logout && logout();
+    router.push('/auth');
+  };
 
   return (
-    <div className="sticky top-0 z-50 backdrop-blur-md bg-white/30 border-b border-white/20">
-      
-      <div className="flex items-center justify-between px-4 py-3 md:px-8">
-        
-       
-    <div className="flex items-center gap-1">
+    <div className="w-48 bg-white h-screen flex flex-col ">
+      {/* Logo */}
+      <div className="flex items-center gap-1 py-5">
   {/* Icon */}
   <div className="w-10 h-10 flex items-center justify-center">
     <svg
@@ -40,53 +55,41 @@ const Navbar = () => {
   </svg>
 </div>
 
-       
-        <div className="font-bold  md:hidden">LOGO</div>
 
-      
-        <ul className="hidden md:flex space-x-10 font-semibold">
-          <li>Solutions</li>
-          <li>Features</li>
-          <li>Benefits</li>
-          <li>Testimonials</li>
-          <li>Resources</li>
-        </ul>
+      {/* Menu Items */}
+      <nav className="flex-1 p-2 space-y-6">
+        {adminMenuItems.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={index}
+              className={`flex items-center gap-3 px-3 py-1 rounded-sm cursor-pointer transition text-sm 
+                ${
+                isActive(item.href)
+                  ? 'bg-gray-200 text-gray-900'
+                  : 'text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => router.push(item.href)}
+            >
+              <Icon size={18} />
+              <span className="font-medium flex-1">{item.label}</span>
+            </div>
+          );
+        })}
+      </nav>
 
-      
-        <button className="hidden md:block bg-[#292740] text-white px-6 text-[11px] py-1 font-semibold rounded-[26pc] cursor-pointer" onClick={() => router.push("/auth")}>
-          REGISTER
-        </button>
-
-   
-        <button
-          className="md:hidden flex flex-col gap-1"
-          onClick={() => setOpen(!open)}
+      {/* Footer Menu */}
+      <div className="p-2  space-y-6">
+        <div 
+          className="flex items-center gap-3 px-3 py-1 rounded-sm cursor-pointer text-gray-600 hover:bg-gray-100 transition text-sm"
+          onClick={handleLogout}
         >
-          <span className="w-5 h-[2px] bg-black"></span>
-          <span className="w-5 h-[2px] bg-black"></span>
-          <span className="w-5 h-[2px] bg-black"></span>
-        </button>
-      </div>
-
-    
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-60 pb-4" : "max-h-0"
-        }`}
-      >
-        <ul className="flex flex-col items-center gap-4 font-semibold">
-          <li>Solutions</li>
-          <li>Features</li>
-          <li>Benefits</li>
-          <li>Testimonials</li>
-          <li>Resources</li>
-          <button className="bg-[#292740] text-white px-6 text-[11px] py-1 font-semibold rounded-[26pc] cursor-pointer" onClick={() => router.push("/auth")}>
-            REGISTER
-          </button>
-        </ul>
+          <LogOut size={18} />
+          <span className="font-medium">Log out</span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default AdminSidebar;

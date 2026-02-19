@@ -12,14 +12,14 @@ import { BiSolidQuoteAltRight } from "react-icons/bi";
 const page = () => {
   return (<>
     <Navbar />
-    <div className='min-h-screen  p-3 flex flex-col gap-5 px-7 mb-20 md:mb-40 gap-y-5 md:gap-y-10 '>
+    <div className='min-h-screen  p-3 px-15 flex flex-col gap-5  mb-20 md:mb-40 gap-y-5 md:gap-y-10 '>
 
       <Hero />
       <div className='flex flex-col gap-5 md:gap-10 items-center justify-center'>
         <div>
-          <h1 className='text-lg md:text-5xl font-bold text-center mb-2 '>EXPLORE OUR COMMUNITIES</h1>
+          <h1 className='text-3xl md:text-5xl font-bold text-center mb-2 '>EXPLORE OUR COMMUNITIES</h1>
 
-          <p className='text-[#555151] text-xl text-center'>Lorem ipsum dolor sit amet consectetur adiolestiae quisquam enim sed beatae possimus a natus! Nobis similique quo alias!</p>
+          <p className='text-[#555151] text-lg  md:text-xl text-center'>Lorem ipsum dolor sit amet consectetur adiolestiae quisquam enim sed beatae possimus a natus! Nobis similique quo alias!</p>
 
         </div>
         <div className='flex items-center justify-around w-full my-5 '>

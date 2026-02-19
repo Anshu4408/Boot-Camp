@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { playfairBlack } from "@/app/font";
+import { AuthTokenProvider } from "@/components/AuthTokenProvider";
 
 import '@fontsource/plus-jakarta-sans'; // Defaults to weight 400
 import '@fontsource/plus-jakarta-sans/500.css'; // Import specific weights if needed
@@ -26,7 +27,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfairBlack.variable} antialiased p-0 m-0`}
       >
-        {children}
+        <AuthTokenProvider>{children}</AuthTokenProvider>
       </body>
     </html>
   );

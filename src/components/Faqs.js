@@ -11,7 +11,7 @@ export default function Faqs({ title, children }) {
       <div className="w-[150px] h-[16px] bg-[#190E3F] rounded-t-md"></div>
 
 
-      <div className="bg-[#190E3F] rounded-b-lg rounded-tr-lg overflow-hidden flex flex-col shadow-[0_15px_35px_rgba(0,0,0,0.3)]  ">
+      <div className={`bg-[#190E3F] rounded-b-lg rounded-tr-lg overflow-hidden flex flex-col shadow-[0_15px_35px_rgba(0,0,0,0.3)] ${isOpen ? "pt-2" : ""}`}>
 
 
         <div
@@ -22,7 +22,7 @@ export default function Faqs({ title, children }) {
           <div className={`min-h-0 overflow-hidden bg-[#CFD5EB] rounded-t-md -rotate-1 ${isOpen ? "mb-[-15]" : "min-h-0"}`} >
 
             <div
-              className={`p-6 pb-8 text-[#3b3b52] md:text-base  leading-relaxed transition-all duration-500 ease-out text-[10px] ${isOpen
+              className={`p-6  pb-8 text-[#3b3b52] md:text-base  leading-relaxed transition-all duration-500 ease-out text-[10px] ${isOpen
                 ? "translate-y-0 opacity-100 delay-100 "
                 : "translate-y-4 opacity-0"
                 }`}

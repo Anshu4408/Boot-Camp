@@ -28,10 +28,10 @@ const AuthHero = () => {
             </svg>
             <div className='flex items-center justify-center gap-40 '>
          
-                <Image src="/setting2.svg" alt="logo" width={100} height={100}             />
+                <Image src="/setting2.svg" alt="logo" width={100} height={100}       className='relative  top-[-120]'       />
                
-                    <Image src="/seting.svg" alt="logo" width={50} height={50} className='relative left-50 top-[-180]'  />
-                <Image src="/arrow.svg" alt="logo" width={50} height={50}  />
+                    <Image src="/seting.svg" alt="logo" width={50} height={50} className='relative left-50 top-[-270]'  />
+                <Image src="/arrow.svg" alt="logo" width={80} height={80} className='relative right-15 top-[-15]'    />
             </div>
                
             
@@ -43,8 +43,8 @@ const AuthHero = () => {
                     <path d="M0 193.311L0 41.1627C0 29.2708 8.28834 19.9076 19.8589 22.6528C93.6655 40.1645 310.225 153.482 428.488 78.0115C560.803 -6.42661 565.342 -17.0229 643.222 20.9458C721.103 58.9145 708.843 77.241 775.865 58.4218C873.452 31.0203 878 -20.8748 878 42.8072V210.456C878 225.027 866.028 236.752 851.461 236.449L25.4605 219.305C11.3144 219.011 0 207.46 0 193.311Z" fill="url(#paint0_linear_219_417)" />
                     <defs>
                         <linearGradient id="paint0_linear_219_417" x1="571.596" y1="37.4125" x2="571.595" y2="262.835" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#E1C9FD" />
-                            <stop offset="1" stop-color="#AF83FC" />
+                            <stop stopColor="#E1C9FD" />
+                            <stop offset="1" stopColor="#AF83FC" />
                         </linearGradient>
                     </defs>
         </g>
@@ -53,8 +53,8 @@ const AuthHero = () => {
                     <path d="M0 193.311L0 41.1627C0 29.2708 8.28834 19.9076 19.8589 22.6528C93.6655 40.1645 310.225 153.482 428.488 78.0115C560.803 -6.42661 565.342 -17.0229 643.222 20.9458C721.103 58.9145 708.843 77.241 775.865 58.4218C873.452 31.0203 878 -20.8748 878 42.8072V210.456C878 225.027 866.028 236.752 851.461 236.449L25.4605 219.305C11.3144 219.011 0 207.46 0 193.311Z" fill="url(#paint0_linear_219_418)"  />
                     <defs>
                         <linearGradient id="paint0_linear_219_418" x1="571.596" y1="37.4125" x2="571.595" y2="262.835" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#E1C9FD" />
-                            <stop offset="1" stop-color="#AF83FC" />
+                            <stop stopColor="#E1C9FD" />
+                            <stop offset="1" stopColor="#AF83FC" />
                         </linearGradient>
                     </defs>
                          </g>
@@ -63,8 +63,8 @@ const AuthHero = () => {
                     <path d="M0 193.311L0 41.1627C0 29.2709 8.28833 19.9076 19.8589 22.6529C93.6655 40.1645 310.225 153.482 428.488 78.0115C560.803 -6.42657 565.342 -17.0229 643.222 20.9458C721.103 58.9146 708.843 77.241 775.865 58.4218C873.452 31.0204 878 -20.8748 878 42.8072V210.456C878 225.027 866.028 236.752 851.46 236.449L25.4605 219.305C11.3144 219.011 0 207.46 0 193.311Z" fill="url(#paint0_linear_219_419)" />
                     <defs>
                         <linearGradient id="paint0_linear_219_419" x1="0" y1="118.5" x2="878" y2="118.5" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#5D3EC2" />
-                            <stop offset="1" stop-color="#9172F9" />
+                            <stop stopColor="#5D3EC2" />
+                            <stop offset="1" stopColor="#9172F9" />
                         </linearGradient>
                     </defs>
                  </g>

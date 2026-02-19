@@ -1,10 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import { Lock, Mail, User } from 'lucide-react';
+import { useAuthToken } from '@/components/AuthTokenProvider';
+import { useRouter } from 'next/navigation';
 
 const AuthForm = () => {
+    const router = useRouter();
+    const { setToken, setUserRole } = useAuthToken();
     const [formData, setFormData] = useState({
-        username: '',
+        name: '',
         email: '',
         password: '',
         confirmPassword: '',
@@ -25,12 +29,76 @@ const AuthForm = () => {
         e.preventDefault();
         console.log('Form submitted:', formData);
     };
-    const handleSignup = () => {
-        console.log('Signup data:', formData);
+    const handleSignup = async() => {
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            if (!response.ok) {
+                console.error('Signup failed:', response.status);
+                return;
+            }
+            const data = await response.json();
+            if (data?.token) {
+                setToken(data.token);
+                router.push('/auth/signupConfirm'); 
+                
+            }
+        }catch(error){
+            console.error('Error during signup:', error);
+        }
+        
     };
 
-    const handleLogin = () => {
-        console.log('Login data:', formData);
+    const handleLogin = async () => {
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            if (!response.ok) {
+                console.error('Login failed:', response.status);
+                return;
+            }
+            const data = await response.json();
+            if (data?.token) {
+                setToken(data.token);
+                
+                // Fetch user details to get role
+                const userResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
+                    headers: {
+                        'Authorization': `Bearer ${data.token}`,
+                    },
+                });
+                
+                if (userResponse.ok) {
+                    const userData = await userResponse.json();
+                    const user = userData?.data || userData?.user || userData;
+                    const role = user?.role || 'user';
+                    setUserRole(role);
+                    
+                    // Redirect based on role
+                    if (role === 'admin') {
+                        router.push('/admin/courses');
+                    } else {
+                        router.push('/user/dashboard');
+                    }
+                } else {
+                    // Default to user dashboard if role fetch fails
+                    setUserRole('user');
+                    router.push('/user/dashboard');
+                }
+            }
+        } catch (error) {
+            console.error('Error during login:', error);
+        }
     };
 
     return (
@@ -45,7 +113,7 @@ const AuthForm = () => {
                 </div>
 
                 {/* Tabs */}
-                <div className="flex bg-[#E7E2F3] rounded-xl p-1 mb-8">
+                <div className="flex bg-[#E7E2F3] rounded-xl  mb-8">
                     <button className={`flex-1 py-2 rounded-lg text-sm font-medium cursor-pointer transition-colors ${signup ? 'bg-[#7C4BE7] text-white' : 'text-gray-700'}`} onClick={() => {setSignup(true); setForgotPassword(false); setResetPassword(false)}}>
                         Sign Up
                     </button>
@@ -149,10 +217,10 @@ const AuthForm = () => {
                                 </span>
                                 <input
                                     type="text"
-                                    name="username"
-                                    value={formData.username}
+                                    name="name"
+                                    value={formData.name}
                                     onChange={handleChange}
-                                    placeholder="Username"
+                                    placeholder="Full Name"
                                     className="w-full pl-12 pr-4 py-3 border border-[#E3D9F7] rounded-xl focus:ring-2 focus:ring-[#7C4BE7] focus:border-transparent outline-none"
                                 />
                             </div> : null}

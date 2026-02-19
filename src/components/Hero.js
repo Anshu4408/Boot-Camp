@@ -1,8 +1,8 @@
 import React from "react";
 import { playfairBlack } from "@/app/font";
-import { Sparkles,ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 const items = Array.from({ length: 200 });
-const activeCells = [  61,  45, 57, 123, 136 ];
+const activeCells = [61, 45, 57, 123, 136];
 
 const Hero = () => {
   return (<>
@@ -65,7 +65,7 @@ const Hero = () => {
   bg-[#5e22de]
   blur-[40px] md:blur-[60px]
   rotate-[-48deg]" />
-  <div className="pointer-events-none absolute
+      <div className="pointer-events-none absolute
   left-[30%] top-[-20%]
   w-[8vw] max-w-[140px]
   h-[80vh] max-h-[640px]
@@ -73,7 +73,7 @@ const Hero = () => {
   blur-[40px]
  
   rotate-[-48deg]" />
-   <div className="pointer-events-none absolute
+      <div className="pointer-events-none absolute
   left-[5%] top-[-5%]
   w-[8vw] max-w-[140px]
   h-[80vh] max-h-[640px]
@@ -89,7 +89,7 @@ const Hero = () => {
   blur-[40px] md:blur-[60px]
   rounded-full
   rotate-[-48deg]" />
-   <div className="pointer-events-none absolute
+      <div className="pointer-events-none absolute
   right-[5%] top-[10%]
   w-[7vw] max-w-[180px]
   h-[70vh] max-h-[400px]
@@ -97,12 +97,12 @@ const Hero = () => {
  blur-[40px] md:blur-[60px]
   rounded-full
   rotate-[-48deg]" />
-   <button className="absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10   text-[6px] text-[#ffffffc9] md:text-[12px] mb-[14%] flex justify-center items-center gap-2 bg-[#010102] px-5 py-2 rounded-full shadow-[inset_0_0_8px_rgba(113,78,189,0.6)]"><span><Sparkles className="w-2 h-2 md:w-3 md:h-3 text-[#714EBD]" /></span>Welcome to the site_name</button>
+      <button className="absolute top-1/6 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10   text-[6px] text-[#ffffffc9] md:text-[12px] mb-[14%] flex justify-center items-center gap-2 bg-[#010102] px-5 py-2 rounded-full shadow-[inset_0_0_8px_rgba(113,78,189,0.6)]"><span><Sparkles className="w-2 h-2 md:w-3 md:h-3 text-[#714EBD]" /></span>Welcome to the site_name</button>
       <div className="absolute top-1/2 left-1/2 z-10
   -translate-x-1/2 -translate-y-1/2
   text-white flex flex-col items-center text-center
   px-4 max-w-[90%] sm:max-w-[700px]">
-   
+
         <p
           className="inline-block
   text-sm sm:text-2xl md:text-3xl lg:text-6xl font-semibold
@@ -119,10 +119,10 @@ const Hero = () => {
         <p className='text-[6px]  md:text-[13px] my-4 text-center text-[#ACACAC]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quasi aspernatur! Libero et atque praesentium.</p>
         <span className="md:flex-row md:gap-4  mt-8 flex flex-col justify-center items-center w-full max-w-[300px]">
           <button className="text-[6px] text-[#ffffffc9] md:text-[12px] mb-[14%] flex justify-center items-center gap-2 bg-[linear-gradient(90deg,#622CD5_0%,#33176F_100%)] font-semibold px-2 md:px-5 md:py-2 py-1 rounded-full w-full "><span className="">Get Started</span><ArrowRight className="w-2 h-2 md:w-3 md:h-3 font-semibold" /></button>
-      <button className="text-[6px] text-[#ffffffc9] px-2 md:px-5 md:py-2 py-1 md:text-[12px] mb-[14%] flex justify-center items-center gap-2 bg-[#01010200]  rounded-full  border border-[#503982d6] font-semibold w-full">Learn More</button>
-      
+          <button className="text-[6px] text-[#ffffffc9] px-2 md:px-5 md:py-2 py-1 md:text-[12px] mb-[14%] flex justify-center items-center gap-2 bg-[#01010200]  rounded-full  border border-[#503982d6] font-semibold w-full">Learn More</button>
+
         </span>
-        </div>
+      </div>
 
     </div>
 
